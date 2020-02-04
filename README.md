@@ -17,11 +17,11 @@ npm install
 DB_HOST=
 DB_USERNAME=
 DB_PASSWORD=
-DB_PORT=3306 #mysql port
-DB_DATABASE=crudnodejsmysql
+DB_PORT=3306     #mysql port
+DB_DATABASE=
 
-SECRET= # secret key to generate jwt
-SESSION_EXPIRY_TIME= # Token expiration time
+SECRET=     #secret key to generate jwt
+SESSION_EXPIRY_TIME=      #Token expiration time
 ```
 
 # Run the project
