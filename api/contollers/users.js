@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken')
 const generateToken = (req) => {
   return jwt.sign(
     {
-      username: req.data.userName
+      email: req.body.email
     },
     process.env.SECRET,
     {
@@ -19,7 +19,7 @@ const fetchData = (req) => {
         reject(err)
       }
 
-      conn.query(`SELECT * FROM users where email=${req.data.email} and password=${req.data.password};`, (err, result) => {
+      conn.query(`SELECT * FROM users where email='${req.body.email}' and password='${req.body.password}';`, (err, result) => {
         if (err) {
           reject(err)
         }
@@ -37,12 +37,12 @@ const login = async (req, res) => {
   try {
     let result = await fetchData(req)
     let token = await generateToken(req)
-    let resp = {}
-    resp.data = {
+    let response = {
       token: token
     }
-    res.status(200).send(resp)
+    res.status(201).send(response)
   } catch (error) {
+    console.log(error)
     res.status(400).send(error)
   }
 }
