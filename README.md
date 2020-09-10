@@ -10,7 +10,7 @@ npm install
 # Database configuration
 * Create a database with name: nodejwtmysql and import users.sql file in mysql
 * Create a env folder at root location.
-* Inside env create a file name- .env For eg : env/.env 
+* Inside env create a file name- <strong>.env</strong> For eg :  <strong>env/.env</strong> 
 * Add the db credentials
 
 ```
@@ -28,6 +28,6 @@ SESSION_EXPIRY_TIME=      #Token expiration time
 ```
 node app.js
 ```
-* First hit login in the response you will get token.
+* First hit login api and in the response you will get token.
 * Use this token for the second (afterlogin) api.
-* Add this token in Authorization section of (afterlogin) api request and select type as Bearer Token 
+* Add this token in headers-> Authorization section of (afterlogin) api request and select type as Bearer Token 
