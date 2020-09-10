@@ -3,7 +3,7 @@ This is a simple authentication example in Node.js (Express), MySQL and JWT.
 
 # Installation
 Clone or download zip to your machine then hit this:
-```
+```javascript
 npm install
 ```
 
@@ -13,19 +13,19 @@ npm install
 * Inside env create a file name- <strong>.env</strong> For eg :  <strong>env/.env</strong> 
 * Add the db credentials
 
-```
+```javascript
 DB_HOST=
 DB_USERNAME=
 DB_PASSWORD=
-DB_PORT=3306     #mysql port
+DB_PORT=3306              #mysql port
 DB_DATABASE=
 
-SECRET=     #secret key to generate jwt
+SECRET=                   #secret key to generate jwt
 SESSION_EXPIRY_TIME=      #Token expiration time
 ```
 
 # Run the project
-```
+```javascript
 node app.js
 ```
 * First hit login api and in the response you will get token.
